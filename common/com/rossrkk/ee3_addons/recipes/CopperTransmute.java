@@ -33,6 +33,6 @@ public class CopperTransmute
         ArrayList<ItemStack > copperOres = OreDictionary.getOres("ingotCopper");
         ItemStack copperItem = copperOres.get(0);
         RecipeHelper.addRecipe(copperItem, transmutationStone , Item.ingotIron, Item.ingotIron);
-        } catch (Exception e){}
+        } catch (Exception e){/*Swallowed*/}
     }
 }
