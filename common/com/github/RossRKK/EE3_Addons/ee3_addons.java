@@ -1,6 +1,6 @@
-package com.rossrkk.ee3_addons;
-import com.rossrkk.ee3_addons.recipes.CopperTransmute;
-import com.rossrkk.ee3_addons.lib.Reference;
+package com.github.RossRKK.EE3_Addons;
+import com.github.RossRKK.EE3_Addons.lib.Reference;
+import com.github.RossRKK.EE3_Addons.recipes.CopperTransmute;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;

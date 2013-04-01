@@ -1,4 +1,4 @@
-package com.rossrkk.ee3_addons.lib;
+package com.github.RossRKK.EE3_Addons.lib;
 
 public class Reference
 {

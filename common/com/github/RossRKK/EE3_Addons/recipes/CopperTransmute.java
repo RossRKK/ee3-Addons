@@ -1,4 +1,4 @@
-package com.rossrkk.ee3_addons.recipes;
+package com.github.RossRKK.EE3_Addons.recipes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
