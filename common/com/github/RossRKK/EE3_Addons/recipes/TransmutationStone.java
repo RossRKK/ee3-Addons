@@ -17,6 +17,12 @@ public class TransmutationStone {
 
     public static List<ItemStack> transmutationStones = Arrays.asList(miniumStone, philStone);
     
+    public static void init(){
+        for (ItemStack stone : transmutationStones){
+            transmutationRecipes(stone);
+        }
+    }
+    
     public static void transmutationRecipes(ItemStack transmutationStone){
         //gravel into flint
         RecipeHelper.addRecipe(new ItemStack(Item.flint, 3), transmutationStone, Block.gravel, Block.gravel, Block.gravel);

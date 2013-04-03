@@ -1,6 +1,7 @@
 package com.github.RossRKK.EE3_Addons;
 import com.github.RossRKK.EE3_Addons.lib.Reference;
 import com.github.RossRKK.EE3_Addons.recipes.CopperTransmute;
+import com.github.RossRKK.EE3_Addons.recipes.TransmutationStone;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -14,5 +15,6 @@ public class ee3_addons
     public void load(FMLInitializationEvent event)
     {
         CopperTransmute.init();
+        TransmutationStone.init();
     }
 }
