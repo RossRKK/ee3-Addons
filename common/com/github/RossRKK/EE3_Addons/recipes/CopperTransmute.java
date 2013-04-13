@@ -23,9 +23,27 @@ public class CopperTransmute {
     public static void init() {
         for (ItemStack stone : transmutationStones) {
             copper(stone);
+            tin(stone);
+            silver(stone);
         }
     }
 
+    public static void tin(ItemStack transmutationStone){
+        try{
+            ArrayList<ItemStack> tinOres = OreDictionary.getOres("ingotTin");
+            ItemStack tinItem = tinOres.get(0);
+            RecipeHelper.addRecipe(tinItem, transmutationStone, Item.ingotIron, Item.ingotIron, Item.ingotIron);
+        }catch (Exception e) {/*Swallowed*/}
+    }
+    
+    public static void silver(ItemStack transmutationStone){
+        try{
+            ArrayList<ItemStack> silverOres = OreDictionary.getOres("ingotSilver");
+            ItemStack silverItem = silverOres.get(0);
+            RecipeHelper.addRecipe(silverItem, transmutationStone, Item.ingotGold, Item.ingotGold);
+        }catch (Exception e) {/*Swallowed*/}
+    }
+    
     public static void copper(ItemStack transmutationStone) {
         try {
             ArrayList<ItemStack> copperOres = OreDictionary
