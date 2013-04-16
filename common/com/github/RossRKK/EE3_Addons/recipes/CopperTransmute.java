@@ -34,7 +34,7 @@ public class CopperTransmute {
             ItemStack tinItem = tinOres.get(0);
             tinItem.stackSize = 3;
             RecipeHelper.addRecipe(tinItem, transmutationStone, Item.ingotIron, Item.ingotIron, Item.ingotIron);
-        }catch (Exception e) {System.out.println("tin not found"); /*Swallowed*/}
+        }catch (Exception e) {/*Swallowed*/}
     }
     
     public static void silver(ItemStack transmutationStone){
