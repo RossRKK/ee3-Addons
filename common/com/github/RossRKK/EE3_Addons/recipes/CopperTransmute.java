@@ -32,6 +32,7 @@ public class CopperTransmute {
         try{
             ArrayList<ItemStack> tinOres = OreDictionary.getOres("ingotTin");
             ItemStack tinItem = tinOres.get(0);
+            tinItem.stackSize = 3;
             RecipeHelper.addRecipe(tinItem, transmutationStone, Item.ingotIron, Item.ingotIron, Item.ingotIron);
         }catch (Exception e) {System.out.println("tin not found"); /*Swallowed*/}
     }
@@ -40,6 +41,7 @@ public class CopperTransmute {
         try{
             ArrayList<ItemStack> silverOres = OreDictionary.getOres("ingotSilver");
             ItemStack silverItem = silverOres.get(0);
+            silverItem.stackSize = 2;
             RecipeHelper.addRecipe(silverItem, transmutationStone, Item.ingotGold, Item.ingotGold);
         }catch (Exception e) {/*Swallowed*/}
     }
@@ -49,6 +51,7 @@ public class CopperTransmute {
             ArrayList<ItemStack> copperOres = OreDictionary
                     .getOres("ingotCopper");
             ItemStack copperItem = copperOres.get(0);
+            copperItem.stackSize = 2;
             RecipeHelper.addRecipe(copperItem, transmutationStone,
                     Item.ingotIron, Item.ingotIron);
         } catch (Exception e) {/* Swallowed */}
