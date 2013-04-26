@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 public class BlockPedestal extends ModBlock{
 
     public BlockPedestal(int id) {
-        super(id, Material.rock);
+        super(id, Material.anvil);
         this.setUnlocalizedName("pedestal");
         this.setCreativeTab(EquivalentExchange3.tabsEE3);
         this.setHardness(5F);
