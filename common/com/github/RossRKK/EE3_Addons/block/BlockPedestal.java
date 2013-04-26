@@ -11,5 +11,4 @@ public class BlockPedestal extends ModBlock{
         this.setCreativeTab(EquivalentExchange3.tabsEE3);
         this.setHardness(5F);
     }
-
 }
