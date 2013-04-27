@@ -6,9 +6,9 @@ import net.minecraft.world.World;
 
 public abstract class WorldScanner {
     
-    World world;
+    static World world;
     
-    public void WorldScan(int x, int y, int z){
+    public static void WorldScan(int x, int y, int z){
         //calculate search box bounds
         int searchStartX = x - Numbers.SEARCH_RADIUS;
         int searchStartY = y - Numbers.SEARCH_RADIUS;
@@ -18,11 +18,13 @@ public abstract class WorldScanner {
         int searchEndY = y + Numbers.SEARCH_RADIUS;
         int searchEndZ = z + Numbers.SEARCH_RADIUS;
         
+        int[][][] ids;
+        
         //search for the world
         for (int a = searchStartX; a < searchEndX; a ++){
             for (int b = searchStartY; b < searchEndY; b++){
                 for (int c = searchStartZ; c < searchEndZ; c++){
-                    int id = world.getBlockId(a, b, c);
+                    world.getBlockId(a, b, c);
                 }
             }
         }

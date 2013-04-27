@@ -8,6 +8,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
+import com.github.RossRKK.EE3_Addons.World.WorldScanner;
 import com.pahimar.ee3.block.BlockEE;
 import com.pahimar.ee3.tileentity.TileEE;
 
@@ -30,7 +31,7 @@ public class ModBlock extends BlockEE{
      */
     @Override
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLiving entityLiving, ItemStack itemStack) {
-
+        
         int direction = 0;
         int facing = MathHelper.floor_double(entityLiving.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 
