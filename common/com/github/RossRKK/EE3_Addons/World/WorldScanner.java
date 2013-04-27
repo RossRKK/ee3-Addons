@@ -4,11 +4,10 @@ import com.github.RossRKK.EE3_Addons.lib.Numbers;
 
 import net.minecraft.world.World;
 
-public abstract class WorldScanner {
-    
-    static World world;
-    
-    public static void WorldScan(int x, int y, int z){
+public class WorldScanner {
+
+    public static void WorldScan(World world, int x, int y, int z){
+        
         //calculate search box bounds
         int searchStartX = x - Numbers.SEARCH_RADIUS;
         int searchStartY = y - Numbers.SEARCH_RADIUS;
@@ -22,7 +21,7 @@ public abstract class WorldScanner {
         for (int a = searchStartX; a < searchEndX; a ++){
             for (int b = searchStartY; b < searchEndY; b++){
                 for (int c = searchStartZ; c < searchEndZ; c++){
-                    world.getBlockId(a, b, c);
+                    System.out.println(world.getBlockId(a, b, c));
                 }
             }
         }
