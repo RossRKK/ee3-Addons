@@ -18,8 +18,6 @@ public abstract class WorldScanner {
         int searchEndY = y + Numbers.SEARCH_RADIUS;
         int searchEndZ = z + Numbers.SEARCH_RADIUS;
         
-        int[][][] ids;
-        
         //search for the world
         for (int a = searchStartX; a < searchEndX; a ++){
             for (int b = searchStartY; b < searchEndY; b++){
