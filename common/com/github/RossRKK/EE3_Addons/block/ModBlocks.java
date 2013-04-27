@@ -1,5 +1,6 @@
 package com.github.RossRKK.EE3_Addons.block;
 
+import com.github.RossRKK.EE3_Addons.lib.Numbers;
 import com.github.RossRKK.EE3_Addons.lib.Strings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -10,7 +11,7 @@ public class ModBlocks {
     public static Block orb;
     
     public static void init(){
-        orb = new BlockOrb(3000);
+        orb = new BlockOrb(Numbers.ORB_ID);
         
         GameRegistry.registerBlock(orb, Strings.ORB_NAME);
     }
