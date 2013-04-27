@@ -2,9 +2,14 @@ package com.github.RossRKK.EE3_Addons.block;
 
 import com.github.RossRKK.EE3_Addons.DataTypes.Coordinates;
 import com.github.RossRKK.EE3_Addons.World.WorldScanner;
+import com.github.RossRKK.EE3_Addons.tileentity.TileOrb;
 import com.pahimar.ee3.EquivalentExchange3;
+import com.pahimar.ee3.lib.GuiIds;
+import com.pahimar.ee3.tileentity.TileAlchemicalChest;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlockOrb extends ModBlock{
@@ -16,22 +21,21 @@ public class BlockOrb extends ModBlock{
         this.setUnlocalizedName("orb");
         this.setCreativeTab(EquivalentExchange3.tabsEE3);
         this.setHardness(5F);
-        isActive = false;
     }
 
-    public static void activate(World world, int x, int y, int z){
-        Coordinates orbLocate = WorldScanner.WorldScan(world, x, y, z);
-        if (orbLocate.active){
-            System.out.println("Activated");
-        }else{
-            System.out.println("Activation Failed");
-        }
+    
+    @Override
+    public TileEntity createNewTileEntity(World world) {
+
+        return new TileOrb();
     }
     
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-
-        activate(world, x, y, z);
+        TileOrb tileOrb = (TileOrb) world.getBlockTileEntity(x, y, z);
+        if (tileOrb != null) {
+            TileOrb.activate(world, x, y, z);
+        }
         return true;
     }
 }

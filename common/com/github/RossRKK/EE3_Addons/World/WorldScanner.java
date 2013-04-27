@@ -2,7 +2,9 @@ package com.github.RossRKK.EE3_Addons.World;
 
 import com.github.RossRKK.EE3_Addons.DataTypes.Coordinates;
 import com.github.RossRKK.EE3_Addons.lib.Numbers;
+import com.github.RossRKK.EE3_Addons.tileentity.TileOrb;
 
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class WorldScanner {
@@ -19,13 +21,14 @@ public class WorldScanner {
         int searchEndY = y + Numbers.SEARCH_RADIUS;
         int searchEndZ = z + Numbers.SEARCH_RADIUS;
         
+        TileOrb tileOrb = null;
+        
         Coordinates location = null;
         //search for the world
         for (int a = searchStartX; a < searchEndX; a ++){
             for (int b = searchStartY; b < searchEndY; b++){
                 for (int c = searchStartZ; c < searchEndZ; c++){
-                    int id = world.getBlockId(a,  b, c);
-                    if (id == Numbers.ORB_ID && !(a == x) && !(b == y) && !(c == z)){
+                    if (world.blockHasTileEntity(a,  b, c) && world.getBlockTileEntity(a, b, c) == tileOrb){
                             location.x = a;
                             location.y = b;
                             location.z = c;
