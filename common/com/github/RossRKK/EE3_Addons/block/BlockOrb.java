@@ -21,7 +21,11 @@ public class BlockOrb extends ModBlock{
 
     public static void activate(World world, int x, int y, int z){
         Coordinates orbLocate = WorldScanner.WorldScan(world, x, y, z);
-        isActive = true;
+        if (orbLocate.active){
+            System.out.println("Activated");
+        }else{
+            System.out.println("Activation Failed");
+        }
     }
     
     @Override
