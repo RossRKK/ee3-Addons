@@ -7,11 +7,11 @@ import net.minecraft.block.Block;
 
 public class ModBlocks {
     //Block instances
-    public static Block pedestal;
+    public static Block orb;
     
     public static void init(){
-        pedestal = new BlockPedestal(3000);
+        orb = new BlockOrb(3000);
         
-        GameRegistry.registerBlock(pedestal, Strings.PEDESTAL_NAME);
+        GameRegistry.registerBlock(orb, Strings.ORB_NAME);
     }
 }
