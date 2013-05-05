@@ -1,0 +1,21 @@
+[
+{
+  "modid": "EE3_ADDON",
+  "name": "Equivalent Exchange 3 Addons",
+  "description": "Addon pack for EE3",
+  "version": "Developmaent",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "RossRKK",
+  ],
+  "credits": "Made by the community",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+	"EE3",
+  ]
+}
+]
