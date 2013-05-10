@@ -8,9 +8,12 @@ import com.pahimar.ee3.lib.GuiIds;
 import com.pahimar.ee3.tileentity.TileAlchemicalChest;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.client.settings.EnumOptions;
+import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
 
 public class BlockOrb extends ModBlock{
     
@@ -26,16 +29,21 @@ public class BlockOrb extends ModBlock{
     
     @Override
     public TileEntity createNewTileEntity(World world) {
-
         return new TileOrb();
     }
     
+    
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-        TileOrb tileOrb = (TileOrb) world.getBlockTileEntity(x, y, z);
-        if (tileOrb != null) {
-            TileOrb.activate(world, x, y, z);
-        }
+        if (player.isSneaking())
+            return true;
+        else if (world.isBlockSolidOnSide(x, y + 1, z, ForgeDirection.DOWN))
+            return true;
+        else if (world.isRemote) {
+            TileOrb tileOrb = (TileOrb) world.getBlockTileEntity(x, y, z);
+            tileOrb.activate(world, x, y, z);
+            return tileOrb.isActive;
+        }   
         return true;
     }
 }

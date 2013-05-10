@@ -2,18 +2,18 @@ package com.github.RossRKK.EE3_Addons.tileentity;
 
 import com.github.RossRKK.EE3_Addons.DataTypes.Coordinates;
 import com.github.RossRKK.EE3_Addons.World.WorldScanner;
+import com.pahimar.ee3.tileentity.TileEE;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class TileOrb extends TileEntity{
+public class TileOrb extends TileEE{
     
     //Variables
     public static boolean isActive = false;
     
-    public static void activate(World world, int x, int y, int z){
-        Coordinates orbLocate = WorldScanner.WorldScan(world, x, y, z);
+    public void activate(World world, int x, int y, int z){
+        Coordinates orbLocate = WorldScanner.WorldScan(world, xCoord, yCoord, zCoord);
         if (orbLocate.active){
             System.out.println("Activated");
             System.out.println(orbLocate.x + orbLocate.y + orbLocate.z);
@@ -23,13 +23,16 @@ public class TileOrb extends TileEntity{
             isActive = false;
         }
     }
+    //coordinates of the tile entity
     
     @Override
     public void writeToNBT(NBTTagCompound nbtTagCompound){
-        super.writeToNBT(nbtTagCompound);
         //writes state to nbt
         NBTTagCompound tagCompound = new NBTTagCompound();
         tagCompound.setBoolean("Active", isActive);
+        tagCompound.setShort("x", (short) xCoord);
+        tagCompound.setShort("y", (short) yCoord);
+        tagCompound.setShort("z", (short) zCoord);
     }
     
     @Override
@@ -37,6 +40,6 @@ public class TileOrb extends TileEntity{
         super.readFromNBT(nbtTagCompound);
         //reads state from nbt
         NBTTagCompound tagCompound = new NBTTagCompound();
-        boolean isActive = tagCompound.getBoolean("Active");
+        isActive = tagCompound.getBoolean("Active");
     }
 }

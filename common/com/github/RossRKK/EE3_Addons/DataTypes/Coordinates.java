@@ -1,8 +1,8 @@
 package com.github.RossRKK.EE3_Addons.DataTypes;
 
 public class Coordinates {
-    public static int x;
-    public static int y;
-    public static int z;
-    public static boolean active;
+    public int x;
+    public int y;
+    public int z;
+    public boolean active;
 }

@@ -4,12 +4,10 @@ import com.github.RossRKK.EE3_Addons.DataTypes.Coordinates;
 import com.github.RossRKK.EE3_Addons.lib.Numbers;
 import com.github.RossRKK.EE3_Addons.tileentity.TileOrb;
 
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class WorldScanner {
 
-    @SuppressWarnings("static-access")
     public static Coordinates WorldScan(World world, int x, int y, int z){
         
         //calculate search box bounds
