@@ -1,7 +1,7 @@
 package com.github.RossRKK.EE3_Addons.tileentity;
 
-import com.github.RossRKK.EE3_Addons.DataTypes.Coordinates;
-import com.github.RossRKK.EE3_Addons.World.WorldScanner;
+import com.github.RossRKK.EE3_Addons.datatypes.Coordinates;
+import com.github.RossRKK.EE3_Addons.world.WorldScanner;
 import com.pahimar.ee3.tileentity.TileEE;
 
 import net.minecraft.nbt.NBTTagCompound;

@@ -1,15 +1,8 @@
 package com.github.RossRKK.EE3_Addons.block;
 
-import com.github.RossRKK.EE3_Addons.DataTypes.Coordinates;
-import com.github.RossRKK.EE3_Addons.World.WorldScanner;
 import com.github.RossRKK.EE3_Addons.tileentity.TileOrb;
 import com.pahimar.ee3.EquivalentExchange3;
-import com.pahimar.ee3.lib.GuiIds;
-import com.pahimar.ee3.tileentity.TileAlchemicalChest;
-
 import net.minecraft.block.material.Material;
-import net.minecraft.client.settings.EnumOptions;
-import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

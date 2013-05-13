@@ -1,4 +1,4 @@
-package com.github.RossRKK.EE3_Addons.DataTypes;
+package com.github.RossRKK.EE3_Addons.datatypes;
 
 public class Coordinates {
     public int x;

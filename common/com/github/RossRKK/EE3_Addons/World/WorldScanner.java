@@ -1,6 +1,6 @@
-package com.github.RossRKK.EE3_Addons.World;
+package com.github.RossRKK.EE3_Addons.world;
 
-import com.github.RossRKK.EE3_Addons.DataTypes.Coordinates;
+import com.github.RossRKK.EE3_Addons.datatypes.Coordinates;
 import com.github.RossRKK.EE3_Addons.lib.Numbers;
 import com.github.RossRKK.EE3_Addons.tileentity.TileOrb;
 
