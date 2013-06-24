@@ -3,6 +3,7 @@ import com.github.RossRKK.EE3_Addons.block.ModBlocks;
 import com.github.RossRKK.EE3_Addons.lib.Reference;
 import com.github.RossRKK.EE3_Addons.recipes.CopperTransmute;
 import com.github.RossRKK.EE3_Addons.recipes.TransmutationStone;
+import com.pahimar.ee3.item.ModItems;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -19,6 +20,7 @@ public class ee3_addons
     @PreInit
     public void ModsToLoad(FMLPreInitializationEvent event){
         ModBlocks.init();
+        ModItems.init();
     }
     
     @Init

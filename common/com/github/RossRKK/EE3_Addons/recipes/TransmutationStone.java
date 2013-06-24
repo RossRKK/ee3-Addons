@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-import com.pahimar.ee3.core.helper.RecipeHelper;
+import com.pahimar.ee3.core.util.RecipeHelper;
 import com.pahimar.ee3.item.ModItems;
 
 public class TransmutationStone {

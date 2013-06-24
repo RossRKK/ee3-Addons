@@ -16,7 +16,7 @@
 	<property name="mod.common.dir"	value="${source.dir}\common"/> <!-- Must have, used for compiling -->
 	<property name="resources.dir"	value="${source.dir}\resources"/> <!-- Must have, used for compiling -->
 	<property name="common.in.dir"	value="${mcpsrc.dir}\com"/> <!-- Used for cleanup -->
-	<property name="lang.dir"		value="..\lang"/> <!-- Optional, delete if you don't have one -->
+	<property name="lang.dir"		value="\lang"/> <!-- Optional, delete if you don't have one -->
 	<property name="mod.name"		value="EE3-Addons"/>
 	
 	<property name="mc.version"		value="1.5.1"/>

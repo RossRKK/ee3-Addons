@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.github.RossRKK.EE3_Addons.lib.Reference;
-import com.pahimar.ee3.core.helper.RecipeHelper;
+import com.pahimar.ee3.core.util.RecipeHelper;
 import java.util.ArrayList;
 
 public class CopperTransmute {
